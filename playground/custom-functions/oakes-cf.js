@@ -20,12 +20,13 @@ const myTotal = calculateBill();
 // console.log(myTotal);
 // console.log(`Your Total is $${myTotal}`);
 
-console.log(`Your total is $${calculateBill()}`); */
+console.log(`Your total is $${calculateBill()}`); 
 
 // /////PARAMETERS AND ARGUMENTS/////
-/* MESSINESS !!!! BUT WORKS
+// MESSINESS !!!! BUT WORKS
+*/
 
-let bill = 100;
+/*let bill = 100;
 const taxRate = 0.13;
 
 function calculateBill() {
@@ -53,9 +54,9 @@ console.log(myTotal, myTotal2); */
 // ///CLEAN UP OR DRY CODE
 
 // PARAMETERS INSTEAD/// PARAMETERS
-/*
+
 function calculateBill(billAmount, taxRate) {
-  console.log(billAmount, taxRate);
+  console.log(Math.round(billAmount, Math.round(taxRate)));
   // this is function body
   console.log('Running Calculate Bill!!!!');
   const total = billAmount * (1 + taxRate);
@@ -63,17 +64,18 @@ function calculateBill(billAmount, taxRate) {
 }
 
 // Function CALL or RUN
-// const myTotal = calculateBill(100, 0.13);
+/*let myTotal = calculateBill(100, 0.13);
 // /ARGUMENTS ARE IN PARENTHESES HERE BELOW AND ABOVE
-// const myTotal2 = calculateBill(200, 0.13);
-// console.log(myTotal, myTotal2);
+ const myTotal2 = calculateBill(200, 0.13);
+ console.log(Math.round(myTotal), Math.round(myTotal2)); */
+
 
 const oakesTotal = 500;
 const oakesTaxRate = 0.3;
-const myTotal = calculateBill(oakesTotal, oakesTaxRate);
-
-function sayHiTo() {
-  return `Hello ${firstName}`;
-}
-
-const greeting */
+let myTotal = calculateBill(oakesTotal, oakesTaxRate);
+//
+//function sayHiTo() {
+//  return `Hello ${firstName}`;
+//}
+//
+//const greeting 
