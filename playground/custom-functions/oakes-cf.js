@@ -55,11 +55,11 @@ console.log(myTotal, myTotal2); */
 
 // PARAMETERS INSTEAD/// PARAMETERS
 
-function calculateBill(billAmount, taxRate) {
-  console.log(Math.round(billAmount, Math.round(taxRate)));
+function calculateBill(billAmount, taxRate = .13, tipRate = 0.15) {
+ // console.log(billAmount, taxRate);
   // this is function body
   console.log('Running Calculate Bill!!!!');
-  const total = billAmount * (1 + taxRate);
+  const total = billAmount + (billAmount * taxRate) + (billAmount * tipRate);
   return total;
 }
 
@@ -72,10 +72,34 @@ function calculateBill(billAmount, taxRate) {
 
 const oakesTotal = 500;
 const oakesTaxRate = 0.3;
-let myTotal = calculateBill(oakesTotal, oakesTaxRate);
-//
-//function sayHiTo() {
-//  return `Hello ${firstName}`;
-//}
-//
-//const greeting 
+//let myTotal = calculateBill(oakesTotal, oakesTaxRate);
+
+//AGAIN FUNCTION DEFINTION//
+function sayHiTo(firstName) {
+  return `Hello ${firstName}`;
+}
+
+//const greeting = sayHiTo(`Patrick`);
+//console.log(greeting);
+
+//function PARAMETERS are NOT variables they can be reused
+function doctorize(name){ 
+return `Dr. ${name}`;
+}
+
+//function will have default holder
+function yell(name = `Silly Goose`) {
+return `HEY ${name.toUpperCase()}`;
+  }
+
+
+
+/*
+//PASSING EXPRESSIONS
+const kait = 100; 
+//const myTotal3 = calculateBill(20 + 20 + 30 + 20, 0.15); works!!! This is before Kait
+const myTotal3 = calculateBill(kait + 50, 0.15);
+*/
+
+const myBill4 = calculateBill(100, undefined ,0.2);
+console.log(myBill4);
